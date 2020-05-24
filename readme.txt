@@ -35,6 +35,9 @@ None - no configuration required.
 
 == Changelog ==
 
+= 1.0.2 =
+* Removing duplication
+
 = 1.0.1 =
 * Santizing data
 
