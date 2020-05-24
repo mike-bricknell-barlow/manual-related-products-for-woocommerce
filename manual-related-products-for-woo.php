@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Manual Related Products for Woo Commerce
+ * Plugin Name:       Manual Related Products for WooCommerce
  * Plugin URI:        
  * Description:       Allows you to choose a manual set of products for display under the Related Products section on WooCommerce single product pages.
  * Version:           1.0.0

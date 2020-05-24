@@ -37,7 +37,8 @@ class Manual_Related_Products_For_WooCommerce {
             $related_product_ids = array();
 
             if( isset( $_POST['related_product_ids'] ) ) {
-                $related_product_ids = $_POST['related_product_ids'];
+                // Santize POST data - only numeric strings allowed
+                $related_product_ids = array_filter( $_POST['related_product_ids'], 'ctype_digit' );
             }
             
             update_post_meta( $post_ID, 'related_product_ids', $related_product_ids );
@@ -45,7 +46,8 @@ class Manual_Related_Products_For_WooCommerce {
     }
 
     public function get_related_product_ids_for_current_product() {
-        return get_post_meta( get_the_id(), 'related_product_ids', true );
+        $related_product_ids = array_filter( get_post_meta( get_the_id(), 'related_product_ids', true ), 'ctype_digit' );
+        return $related_product_ids;
     }
 
     public function output_manual_related_products( $related_posts ) {
@@ -54,6 +56,9 @@ class Manual_Related_Products_For_WooCommerce {
         if( empty( $new_related_posts ) ) {
             return $related_posts;
         }
+
+        // Santize data - only numeric strings allowed
+        $new_related_posts = array_filter( $new_related_posts, 'ctype_digit' );
 
         if ( apply_filters( 'woocommerce_product_related_posts_shuffle', true ) ) {
             shuffle( $related_posts );
