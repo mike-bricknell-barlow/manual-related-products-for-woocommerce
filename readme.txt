@@ -35,6 +35,9 @@ None - no configuration required.
 
 == Changelog ==
 
+= 1.0.1 =
+* Santizing data
+
 = 1.0.0 =
 * Initial plugin version
 * Adding Related Products tab to single product settings
