@@ -29,17 +29,13 @@ e.g.
 
 None - no configuration required.
 
-== Frequently Asked Questions ==
-
-= My site doesn't display correctly with HTML Output Buffering turned on - what should I do? =
-
 == Changelog ==
 
 = 1.0.2 =
 * Removing duplication
 
 = 1.0.1 =
-* Santizing data
+* Sanitizing data
 
 = 1.0.0 =
 * Initial plugin version
